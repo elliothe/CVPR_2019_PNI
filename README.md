@@ -33,9 +33,11 @@ If you find this project useful to you, please cite [our work]():
 ## Set up A Conda python Environment
 Anaconda allows you to have different environments installed on your computer to access different versions of `python` and different libraries. Sometimes, the conflict of library versions may causes errors and packages not working.
 
-<aside class="Notice">
+<!-- Use class="notice" for blue notes, class="warning" for red warnings, and class="success" for green notes. -->
+
+<div class="Notice">
 You must replace `meowmeowmeow` with your personal API key.
-</aside>
+</div>
   
   
 ## Usage
