@@ -41,3 +41,13 @@ You must replace `meowmeowmeow` with your personal API key.
   
   
 ## Usage
+
+
+
+## Notes for Experiments setup
+
+1. Previous works remove the normalization layer from the data-preprocessing. Since we still expect the fast convergence benefit from the normalization of input image, we add a normalization in front of the neural network which perform the identical functionality but with the normalization incoporated within the backward computation graph.
+
+2. 
+
+
