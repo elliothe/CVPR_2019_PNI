@@ -51,11 +51,12 @@ In our paper, only the layer-wise PNI is discussed, but we also test the [channe
 
 ## Dependencies:
   
-  
 * Python 3.6 (Anaconda)
-* Pytorch >=4.1
-* TensorboardX 
-  
+* [Pytorch](https://pytorch.org/) >=0.41
+* [TensorboardX](https://github.com/lanpa/tensorboardX) 
+
+For more specific dependency, please refer [environment.yml](./environment.yml) and [environment_setup.md](./docs/environment_setup.md)
+
 <!-- ## Set up A Conda python Environment
 Anaconda allows you to have different environments installed on your computer to access different versions of `python` and different libraries. Sometimes, the conflict of library versions may causes errors and packages not working. -->
 
