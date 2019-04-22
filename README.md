@@ -22,6 +22,8 @@ If you find this project useful to you, please cite [our work](./CVPR19_PNI.pdf)
 - [Introduction](#Introduction) 
 - [Dependencies](#Dependencies)
 - [Usage](#Usage)
+    - [Train](#Train)
+    - [Evaluation](#Evaluation)
 - [Notes for Experiments setup](#Notes-for-Experiments-setup )
 - [Result](#Result)
 
@@ -65,12 +67,42 @@ You must replace `meowmeowmeow` with your personal API key.
   
   
 ## Usage
-Please modify the example bash code we provide for running the code.
+Please modify the example bash code (`train_cifar.sh` and `eval_cifar.sh`) we provide for running the code.
 
-- Number of epochs that delaying the adversarial training is controlled by `epoch_delay`, where the default setup is 5. You can disable it by setting `--epoch_delay 0` in the bash script.
+```bash
+HOST=$(hostname)
+echo "Current host is: $HOST"
 
-- through enable `--adv_eval`, users can monitor the accuracy of perturbed test data (i.e., input image under attack) evolving with the adversarial training progress. For fast training, users can also choose to disable the evaluation, then only perfrom the evaluation with the model after adversarial traning.
+case $HOST in
+"alpha")
+    # python environment path
+    PYTHON="/home/elliot/anaconda3/envs/pytorch_041/bin/python" 
+    # tensorboard path
+    TENSORBOARD='/home/elliot/anaconda3/envs/pytorch_041/bin/tensorboard'
+   ;;
+esac
 
+data_path=''
+```
+
+### Train
+```bash
+bash train_cifar.sh
+```
+- `model`: Set `model=vanilla_resnet20` for baseline adversarial training. Set `model=noise_resnet20` for adversarial training with PNI technique. For switching the layer/channel/element-wise PNI on weight, please modify the model definition in [models/noise_layer.py](). For example:
+    ```
+    ```
+
+
+- `epoch_delay`: Number of epochs that delaying the adversarial training, where the default setup is 5. You can disable it by setting `--epoch_delay 0` in the bash script.
+
+- `adv_eval`: through enabling the adversarial evaluation, users can monitor the accuracy of perturbed test data (i.e., input image under attack) evolving with the adversarial training progress. For fast training, users can also choose to disable the evaluation, then only perfrom the evaluation with the model after adversarial traning.
+
+### Evaluation
+```bash
+bash eval_cifar.sh
+```
+-  Change the `pretrained_model=` in `eval_cifar.sh` for the target model.
 
 ## Notes for Experiments setup
 
