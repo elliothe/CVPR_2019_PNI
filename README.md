@@ -36,8 +36,7 @@ Parametric Noise Injection (PNI) is a technique to improve the robustness of dee
     </embed>
 </object> -->
 
-<embed src="https://github.com/elliothe/CVPR_2019_PNI/blob/master/pics/flowchart.pdf" width="500" height="375" 
- type="application/pdf">
+![image info](./pics/flowchart.png)
 
 ## Dependencies:
   
