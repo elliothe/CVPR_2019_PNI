@@ -5,7 +5,7 @@
 
 This repository contains a Pytorch implementation of our paper titled "[Parametric Noise Injection: Trainable Randomness to Improve Deep Neural Network Robustness against Adversarial Attack](./CVPR19_PNI.pdf)"
 
-If you find this project useful to you, please cite [our work]():
+If you find this project useful to you, please cite [our work](./CVPR19_PNI.pdf):
 
 ```bibtex
 @inproceedings{he2019PNI,
@@ -28,7 +28,8 @@ If you find this project useful to you, please cite [our work]():
 
 
 ## Introduction:
-Parametric Noise Injection (PNI) is a technique to improve the robustness of deep neural network against the well-known adversarial attack. We want to highlight that PNI not only  
+Parametric Noise Injection (PNI) is a technique to improve the robustness of deep neural network against the well-known adversarial attack. We want to highlight that PNI can improve both the clean-data (i.e., attack free) accuracy and perturbed-data (i.e., under attack) accuracy.
+
 
 <!-- <object data="./pics/flowchart.pdf" type="application/pdf" width="700px" height="700px">
     <embed src="./pics/flowchart.pdf">
@@ -37,6 +38,14 @@ Parametric Noise Injection (PNI) is a technique to improve the robustness of dee
 </object> -->
 
 ![image info](./pics/flowchart.png)
+
+The key idea is simple and the intuition behind it is straight-forward. For each iteration of network inference, We inject the noise sampled from the Gaussian distributed noise source upon weight (input/activation), in a layer-wise fashion. Such Gaussian noise source is trained with the aid of adversarial training (i.e., min-max optimization). The intuition that optimizer will find a moderate noise level is
+- If the noise magnitude is too large, it will introduce too much randomness into the network inference path, thus significantly lower the inference accuracy.
+
+- If the noise magnitude is too small, the regularization functionality of noise injection is not performed. The famous regularizer -- Dropout can be conducted through Gaussian noise injection but with the fixed configuration.
+
+In our paper, only the layer-wise PNI is discussed, but we also test the [channel-wise/element-wise counterparts](#Result), where channel-wise variant shows the best performance.
+
 
 ## Dependencies:
   
