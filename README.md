@@ -39,7 +39,7 @@ Parametric Noise Injection (PNI) is a technique to improve the robustness of dee
 
 ![image info](./pics/flowchart.png)
 
-The key idea is simple and the intuition behind it is straight-forward. For each iteration of network inference, We inject the noise sampled from the Gaussian distributed noise source upon weight (input/activation), in a layer-wise fashion. Such Gaussian noise source is trained with the aid of adversarial training (i.e., min-max optimization). The intuition that optimizer will find a moderate noise level is
+The key idea is simple and the intuition behind it is straight-forward. For each iteration of network inference, We inject the noise sampled from the Gaussian distributed noise source upon weight (input/activation), in a layer-wise fashion. Such Gaussian noise source is trained with the aid of adversarial training (i.e., min-max optimization). The intuition that optimizer will find a moderate noise level is:
 - If the noise magnitude is too large, it will introduce too much randomness into the network inference path, thus significantly lower the inference accuracy.
 
 - If the noise magnitude is too small, the regularization functionality of noise injection is not performed. The famous regularizer -- Dropout can be conducted through Gaussian noise injection but with the fixed configuration.
@@ -51,11 +51,11 @@ In our paper, only the layer-wise PNI is discussed, but we also test the [channe
   
   
 * Python 3.6 (Anaconda)
-* Pytorch 4.1
+* Pytorch >=4.1
 * TensorboardX 
   
-## Set up A Conda python Environment
-Anaconda allows you to have different environments installed on your computer to access different versions of `python` and different libraries. Sometimes, the conflict of library versions may causes errors and packages not working.
+<!-- ## Set up A Conda python Environment
+Anaconda allows you to have different environments installed on your computer to access different versions of `python` and different libraries. Sometimes, the conflict of library versions may causes errors and packages not working. -->
 
 <!-- Use class="notice" for blue notes, class="warning" for red warnings, and class="success" for green notes.
 
