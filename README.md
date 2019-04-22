@@ -30,11 +30,14 @@ If you find this project useful to you, please cite [our work]():
 ## Introduction:
 Parametric Noise Injection (PNI) is a technique to improve the robustness of deep neural network against the well-known adversarial attack. We want to highlight that PNI not only  
 
-<object data="./pics/flowchart.pdf" type="application/pdf" width="700px" height="700px">
+<!-- <object data="./pics/flowchart.pdf" type="application/pdf" width="700px" height="700px">
     <embed src="./pics/flowchart.pdf">
         <p>This browser does not support PDFs. Please download the PDF to view it: <a href="./pics/flowchart.pdf">Download PDF</a>.</p>
     </embed>
-</object>
+</object> -->
+
+<embed src="https://github.com/elliothe/CVPR_2019_PNI/blob/master/pics/flowchart.pdf" width="500" height="375" 
+ type="application/pdf">
 
 ## Dependencies:
   
