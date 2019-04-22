@@ -68,7 +68,7 @@ You must replace `meowmeowmeow` with your personal API key.
   
   
 ## Usage
-Please modify the example bash code (`train_cifar.sh` and `eval_cifar.sh`) we provide for running the code.
+Please modify `PYTHON=`, `TENSORBOARD=` and `data_path=` in the example bash code (`train_cifar.sh` and `eval_cifar.sh`) before running the code.
 
 ```bash
 HOST=$(hostname)
@@ -90,8 +90,13 @@ data_path=''
 ```bash
 bash train_cifar.sh
 ```
-- `model`: Set `model=vanilla_resnet20` for baseline adversarial training. Set `model=noise_resnet20` for adversarial training with PNI technique. For switching the layer/channel/element-wise PNI on weight, please modify the model definition in [models/noise_layer.py](). For example:
-    ```
+- `model`: Set `model=vanilla_resnet20` for baseline adversarial training. Set `model=noise_resnet20` for adversarial training with PNI technique. For switching the layer/channel/element-wise PNI on weight, please modify the model definition in [models/noise_layer.py](./code/models/noise_layer.py#L10). For example:
+    ```python
+    class noise_Linear(nn.Linear):
+        def __init__(self, in_features, out_features, bias=True, pni='layerwise', w_noise=True):
+
+    class noise_Conv2d(nn.Conv2d):
+        def __init__(self, in_channels, out_channels, kernel_size, stride=1, padding=0, dilation=1, groups=1, bias=True, pni='layerwise', w_noise=True):
     ```
 
 
