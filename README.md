@@ -1,5 +1,8 @@
 # Paramertic Noise Injection for Adversarial Defense
 
+[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
+
+
 This repository contains a Pytorch implementation of our paper titled "[Parametric Noise Injection: Trainable Randomness to Improve Deep Neural Network Robustness against Adversarial Attack](./CVPR19_PNI.pdf)"
 
 If you find this project useful to you, please cite [our work]():
