@@ -90,13 +90,13 @@ data_path=''
 ```bash
 bash train_cifar.sh
 ```
-- `model`: Set `model=vanilla_resnet20` for baseline adversarial training. Set `model=noise_resnet20` for adversarial training with PNI technique. For switching the layer/channel/element-wise PNI on weight, please modify the model definition in [models/noise_layer.py](./code/models/noise_layer.py#L10). For example:
+- `model`: Set `model=vanilla_resnet20` for baseline adversarial training. Set `model=noise_resnet20` for adversarial training with PNI technique. For switching the layer/channel/element-wise PNI on weight, please modify the layer definition in [noise_Linear](./code/models/noise_layer.py#L10) and [noise_Conv2d](./code/models/noise_layer.py#L39). For example, if we want to configure the default layerwise PNI to channelwise:
     ```python
     class noise_Linear(nn.Linear):
         def __init__(self, in_features, out_features, bias=True, pni='layerwise', w_noise=True):
 
-    class noise_Conv2d(nn.Conv2d):
-        def __init__(self, in_channels, out_channels, kernel_size, stride=1, padding=0, dilation=1, groups=1, bias=True, pni='layerwise', w_noise=True):
+    class noise_Linear(nn.Linear):
+        def __init__(self, in_features, out_features, bias=True, pni='channelwise', w_noise=True):
     ```
 
 
