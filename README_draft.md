@@ -1,6 +1,6 @@
 # Paramertic Noise Injection for Adversarial Defense
 
-This repository contains a Pytorch implementation of our paper titled "[Parametric Noise Injection: Trainable Randomness to Improve Deep Neural Network Robustness against Adversarial Attack]()"
+This repository contains a Pytorch implementation of our paper titled "[Parametric Noise Injection: Trainable Randomness to Improve Deep Neural Network Robustness against Adversarial Attack](./CVPR19_PNI.pdf)"
 
 If you find this project useful to you, please cite [our work]():
 
@@ -15,14 +15,16 @@ If you find this project useful to you, please cite [our work]():
 ```
 
 ## Table of Contents
-  
-- [Dependencies](#Dependencies )
-- [Usage](#Usage )
-- [Results](#Results )
-  - ResNet-20/32/44/56 on CIFAR-10
-  - AlexNet and ResNet-18/34/50/101 on ImageNet
-- [Methods](#Methods )
-  
+
+- [Introduction](#Introduction) 
+- [Dependencies](#Dependencies)
+- [Usage](#Usage)
+- [Result](#Result)
+- [Notes for Experiments setup](#Notes )
+
+
+
+## Introduction:
   
 ## Dependencies:
   
@@ -50,7 +52,7 @@ Please modify the example bash code we provide for running the code.
 
 
 ## Result
-Hereby, we choose the ResNet-20 on CIFAR-10 as a study of interest. Besides the Layer-wise PNI we introduced in our paper, we also implement the PNI in channel-wise and element-wise fashion. 
+Hereby, we choose the ResNet-20 on CIFAR-10 as a simple example. Besides the Layer-wise PNI we introduced in our paper, we also implement the PNI in channel-wise and element-wise fashion. 
 
 |      | Clean data | PGD | FGSM |
 |:----:|:---------:|:---------:|:---------:|
