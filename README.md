@@ -1,5 +1,5 @@
 # Paramertic Noise Injection for Adversarial Defense
-
+[![DOI](https://zenodo.org/badge/177472912.svg)](https://zenodo.org/badge/latestdoi/177472912)
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
 
