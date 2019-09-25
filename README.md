@@ -8,13 +8,14 @@ This repository contains a Pytorch implementation of our paper titled "[Parametr
 If you find this project useful to you, please cite [our work](./CVPR19_PNI.pdf):
 
 ```bibtex
-@inproceedings{he2019PNI,
- title={Parametric Noise Injection: Trainable Randomness to Improve Deep Neural Network Robustness against Adversarial Attack},
- author={He, Zhezhi and Adnan Siraj Rakin and Fan, Deliang},
- booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
- pages={},
- year={2019}
+@inproceedings{he2019parametric,
+  title={Parametric noise injection: Trainable randomness to improve deep neural network robustness against adversarial attack},
+  author={He, Zhezhi and Rakin, Adnan Siraj and Fan, Deliang},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={588--597},
+  year={2019}
 }
+
 ```
 
 ## Table of Contents
