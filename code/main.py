@@ -488,7 +488,7 @@ def train(train_loader, model, criterion, optimizer, epoch, log, attacker=None, 
         # perturb data inference
         if adv_train and (attacker is not None):
             model_cp = copy.deepcopy(model)
-            perturbed_data = perturbed_data = attacker.attack_method(
+            perturbed_data = attacker.attack_method(
                 model_cp, input, pred_target)
             output_adv = model(perturbed_data)
             loss_adv = criterion(output_adv, target)

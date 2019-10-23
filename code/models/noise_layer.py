@@ -7,7 +7,7 @@ import numpy as np
 
 class noise_Linear(nn.Linear):
 
-    def __init__(self, in_features, out_features, bias=True, pni='layerwise', w_noise=True):
+    def __init__(self, in_features, out_features, bias=True, pni='channelwise', w_noise=True):
         super(noise_Linear, self).__init__(in_features, out_features, bias)
         
         self.pni = pni
@@ -37,7 +37,7 @@ class noise_Linear(nn.Linear):
 class noise_Conv2d(nn.Conv2d):
 
     def __init__(self, in_channels, out_channels, kernel_size, stride=1, padding=0, dilation=1,
-                 groups=1, bias=True, pni='layerwise', w_noise=True):
+                 groups=1, bias=True, pni='channelwise', w_noise=True):
         super(noise_Conv2d, self).__init__(in_channels, out_channels, kernel_size, stride,
                                          padding, dilation, groups, bias)
 
