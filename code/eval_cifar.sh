@@ -7,8 +7,8 @@ echo "Current host is: $HOST"
 # Remember to configure the conda environment to pytorch 0.4.1
 case $HOST in
 "alpha")
-    PYTHON="/home/elliot/anaconda3/envs/pytorch_041/bin/python" # python environment
-    TENSORBOARD='/home/elliot/anaconda3/envs/pytorch_041/bin/tensorboard'
+    PYTHON="/home/elliot/anaconda3/envs/pytorch041/bin/python" # python environment
+    TENSORBOARD='/home/elliot/anaconda3/envs/pytorch041/bin/tensorboard'
     ;;
 esac
 
@@ -26,14 +26,14 @@ epochs=160
 batch_size=128
 optimizer=SGD
 # add more labels as additional info into the saving path
-label_info=eval
+label_info=eval_layerwise_resnet20
 
 
 data_path='/home/elliot/data/pytorch/cifar10' #dataset path
 tb_path=./save/${DATE}/${dataset}_${model}_${epochs}_${optimizer}_${label_info}/tb_log  #tensorboard log path
 
 # set the pretrained model path
-pretrained_model=./save/2019-04-19/cifar10_noise_resnet20_160_SGD_PNI_W_channelwise/checkpoint.pth.tar
+pretrained_model=/home/elliot/Documents/CVPR_2019/CVPR_2019_PNI/code/save/cifar10_noise_resnet20_160_SGD_29_PNI-W/model_best.pth.tar
 ############### Neural network ############################
 {
 $PYTHON main.py --dataset ${dataset} \

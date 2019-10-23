@@ -126,8 +126,8 @@ Hereby, we choose the ResNet-20 on CIFAR-10 as a simple example. Besides the Lay
 |      | Clean data | PGD | FGSM |
 |:----:|:---------:|:---------:|:---------:|
 | vanilla adv. training |83.84%|39.14$\pm$0.05%|46.55%|    
-| PNI-W (layer-wise) |84.89$\pm$0.11%|45.94$\pm$0.11%|54.48$\pm$0.44%| 
-| PNI-W (channel-wise) |85.17$\pm$0.12%|48.40$\pm$0.37%|56.51$\pm$0.75%| 
+| [PNI-W (layer-wise)](https://drive.google.com/open?id=1lvDb9g2samwOLq8gUe1rhBjVYg9LeUnU) |84.89$\pm$0.11%|45.94$\pm$0.11%|54.48$\pm$0.44%| 
+| [PNI-W (channel-wise)](https://drive.google.com/open?id=14s1vRnkML_DTlzOtbCAjHuaXW_9nY7gO) |85.17$\pm$0.12%|48.40$\pm$0.37%|56.51$\pm$0.75%| 
 | PNI-W (element-wise) |80.69$\pm$0.16%|49.07$\pm$0.41%|55.13$\pm$0.51%|   
 
 

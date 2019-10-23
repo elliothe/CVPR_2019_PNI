@@ -25,7 +25,7 @@ epochs=160
 batch_size=128
 optimizer=SGD
 # add more labels as additional info into the saving path
-label_info=train_channelwise_1e-5decay
+label_info=train_channelwise_3e-4decay
 
 #dataset path
 data_path='/home/elliot/data/pytorch/cifar10'
@@ -41,7 +41,7 @@ $PYTHON main.py --dataset ${dataset} \
     --optimizer ${optimizer} \
 	--schedule 80 120  --gammas 0.1 0.1 \
     --batch_size ${batch_size} --workers 4 --ngpu 1 --gpu_id 0 \
-    --print_freq 100 --decay 0.00001 --momentum 0.9 \
+    --print_freq 100 --decay 0.0003 --momentum 0.9 \
     --adv_eval --epoch_delay 5 \
     --adv_train
 } &
